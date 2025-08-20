@@ -1,0 +1,87 @@
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #0f172a;
+    scroll-behavior: smooth;
+}
+.badge {
+    transition: all 0.3s ease;
+}
+.badge:hover {
+    transform: translateY(-5px) rotate(2deg);
+}
+.nav-link {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+.nav-link:hover {
+    transform: scale(1.1);
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #60a5fa;
+    transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+.grid-bg {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+.logos-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+.logo {
+    width: 70px;
+    height: 70px;
+    transition: transform 0.3s ease;
+}
+.logos-container:hover .logo {
+    transform: scale(1.1);
+}
+.contact a {
+    transition: color 0.3s ease;
+}
+.contact a:hover {
+    color: #60a5fa;
+}
+/* Slide-in Animation for Work Cards */
+.work-card {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.work-card.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+/* Fade-in Animation for Hero Section */
+.hero-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+.hero-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Slide-in Animation for Skills Section */
+.skill-card {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.skill-card.active {
+    opacity: 1;
+    transform: translateX(0);
+}
